@@ -36,6 +36,15 @@ create table Curso(
     foreign key (nombreI, ubicacion) references Institucion(nombreI, ubicacion),
     foreign key (profesorID) references Profesores(profesorID)
 );
+create table Estudiantes (
+	estudianteID char(8) not null primary key,
+	nombreI varchar(50) not null,
+    ubicacion varchar(70) not null,
+    adminID char(8),
+    nombreE varchar(50),
+    foreign key (nombreI, ubicacion) references Institucion (nombreI, ubicacion),
+    foreign key (adminID) references Adminn(adminID)
+);
 create table Ensenar(
     profesorID char(8) not null,
     estudianteID char(8) not null,
@@ -53,15 +62,6 @@ create table Actividades(
     primary key (actividadID),
     foreign key (cursoID) references Curso(cursoID),
     foreign key (profesorID) references Profesores(profesorID)
-);
-create table Estudiantes (
-	estudianteID char(8) not null primary key,
-	nombreI varchar(50) not null,
-    ubicacion varchar(70) not null,
-    adminID char(8),
-    nombreE varchar(50),
-    foreign key (nombreI, ubicacion) references Institucion (nombreI, ubicacion),
-    foreign key (adminID) references Adminn(adminID)
 );
 create table Pertenecer (
 	estudianteID char(8) not null,

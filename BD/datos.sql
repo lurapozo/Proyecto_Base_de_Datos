@@ -1,3 +1,53 @@
+
+
+
+
+/*Institucion*/
+insert into Institucion (nombreI,ubicacion,tipo_Institucion)
+values ("HuevoMundo", "Alborada Km 2","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("CasaChica", "Bonaventure Blvd","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Brawar", "Avenida Las Palmas","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("CasaPequeña", "Bonaventure Blvd","Col");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("San Panchos", "Diego de Robles","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Squidward Community College", "Avenida Paimon","Col");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Instituto Chi Chenol", "plátano Blvd","Esc");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Asuka High School", "Feliz Jueves Street","Col");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("EresGuayarte", "Avenida Pedro Rocadébil","Col");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Instituto ZoreLux", "Calle Discordia","Col");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Universidad Gibbs Duhen", "Calle Fundamental","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Universidad de Artes PeterStudios", "Calle Pedante","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Centralizada autónoma", "Avenida Central","Col");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Universidad Laica Atea", "Calle Vant Hoff","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Universidad Ateo Agnóstico", "Lussac Blvd","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Universidad Mormona El nuevo venir", "Mormonlandia Blvd","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Universidad Estatal Privada de Guayaquil", "Avenida 10","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Colegio Henry Law", "Science Street","Col");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Cine grand splendid", "Avenida Tragedia Verdadera","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Máximo Maximo", "Patico Street","Uni");
+insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
+values ("Squidward University", "Avenida Paimon ","Uni");
+
+
+
 /*Adminn*/
 INSERT INTO Adminn (adminID, nombreI, ubicacion, horario_Turno, correo, nombreA) 
 VALUES ("ADM00001", "HuevoMundo", "Alborada Km 2", "2012-06-18 10:34:09", "elmorenitoquetuquiere@huebomundo.edu.ec", "Admin 01");
@@ -107,55 +157,6 @@ insert into Estudiantes (estudianteID,nombreI,ubicacion,adminID, nombreE) values
 insert into Estudiantes (estudianteID,nombreI,ubicacion,adminID, nombreE) values ("EST00020","Máximo Maximo", "Patico Street", "ADM00021", "TERMINEEEE");
 
 insert into Estudiantes (estudianteID,nombreI,ubicacion,adminID, nombreE) values ("EST00021","HuevoMundo", "Alborada Km 2", "ADM00015", "Atahualpa");
-
-
-
-
-/*Institucion*/
-insert into Institucion (nombreI,ubicacion,tipo_Institucion)
-values ("HuevoMundo", "Alborada Km 2","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("CasaChica", "Bonaventure Blvd","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Brawar", "Avenida Las Palmas","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("CasaPequeña", "Bonaventure Blvd","Col");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("San Panchos", "Diego de Robles","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Squidward Community College", "Avenida Paimon","Col");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Instituto Chi Chenol", "plátano Blvd","Esc");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Asuka High School", "Feliz Jueves Street","Col");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("EresGuayarte", "Avenida Pedro Rocadébil","Col");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Instituto ZoreLux", "Calle Discordia","Col");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Universidad Gibbs Duhen", "Calle Fundamental","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Universidad de Artes PeterStudios", "Calle Pedante","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Centralizada autónoma", "Avenida Central","Col");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Universidad Laica Atea", "Calle Vant Hoff","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Universidad Ateo Agnóstico", "Lussac Blvd","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Universidad Mormona El nuevo venir", "Mormonlandia Blvd","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Universidad Estatal Privada de Guayaquil", "Avenida 10","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Colegio Henry Law", "Science Street","Col");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Cine grand splendid", "Avenida Tragedia Verdadera","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Máximo Maximo", "Patico Street","Uni");
-insert into Institucion (nombreI,ubicacion,tipo_Institucion) 
-values ("Squidward University", "Avenida Paimon ","Uni");
-
-
 
 
 /*Profesores*/
@@ -397,6 +398,8 @@ values ("AC000018","PRF00015","CUR00020","2021-08-04 23:59:00","Deber01: Realiza
 insert into Actividades(actividadID,profesorID,cursoID,fecha_Entrega,descripcion)
 values ("AC000019","PRF00015","CUR00018","2021-08-10 23:59:00","Deber02: Analizar el tiempo de ejecucion de una linkedList al buscar un dato por indice");
 
+insert into Actividades(actividadID,profesorID,cursoID,fecha_Entrega,descripcion)
+values ("AC000020","PRF00015","CUR00018","2021-08-10 23:59:00","Deber023 Analizar el tiempo de ejecucion de un grafo");
 
 /*Pertenecer*/
 insert into Pertenecer (estudianteID, cursoID, horario)
