@@ -1,5 +1,5 @@
 
-/*Adminnn*/
+/*Adminn*/
 /*Se ingresa un admin nuevo*/
 drop procedure if exists anadirAdmin;
 DELIMITER //
@@ -11,9 +11,9 @@ VALUES (iadminID, inombreI, iubicacion, ihorario_Turno, icorreo, inombreA);
 end//
 DELIMITER ;
 /*Cambia el horario de trabajo*/
-drop procedure if exists cambiarAdmin;
+drop procedure if exists cambiarAdminHorario;
 DELIMITER //
-create procedure cambiarAdmin(in iadminID varchar(8), in ihorario_Turno datetime)
+create procedure cambiarAdminHorario(in iadminID varchar(8), in ihorario_Turno datetime)
 begin
 update Adminn set horario_Turno= ihorario_Turno where adminID= iadminID;
 end//
@@ -40,9 +40,9 @@ values (iestudianteID, inombreI, iubicacion, iadminID, inombreE);
 end//
 DELIMITER ;
 /*Cambia el admin asignado a este estudiante*/
-drop procedure if exists cambiarEstudiante;
+drop procedure if exists cambiarEstudianteAdmin;
 DELIMITER //
-create procedure cambiarEstudiante(in iestudianteID varchar(8),in iadminID varchar(8))
+create procedure cambiarEstudianteAdmin(in iestudianteID varchar(8),in iadminID varchar(8))
 begin
 update Estudiantes set adminID= iadminID where estudianteID= iestudianteID;
 end//
@@ -71,9 +71,9 @@ values (inombreI, iubicacion, itipo_Institucion);
 end//
 DELIMITER ;
 /*Cambia el tipo de institucion*/
-drop procedure if exists cambiarInstitucion;
+drop procedure if exists cambiarInstitucionTipo;
 DELIMITER //
-create procedure cambiarInstitucion(in inombreI varchar(50),in iubicacion varchar(70),
+create procedure cambiarInstitucionTipo(in inombreI varchar(50),in iubicacion varchar(70),
 in itipo_Institucion varchar(10))
 begin
 update Institucion set tipo_Institucion= itipo_Institucion where nombreI= inombreI and ubicacion=iubicacion;
@@ -112,9 +112,9 @@ values (iprofesorID , inombreI, iubicacion, iadminID, inombreP);
 end//
 DELIMITER ;
 /*Cambia el admin asignado de este profesor*/
-drop procedure if exists cambiarProfesor;
+drop procedure if exists cambiarProfesorAdmin;
 DELIMITER //
-create procedure cambiarProfesor(in iprofesorID varchar(8),in iadminID varchar(8))
+create procedure cambiarProfesorAdmin(in iprofesorID varchar(8),in iadminID varchar(8))
 begin
 update Profesores set adminID= iadminID where profesorID= iprofesorID;
 end//
@@ -145,9 +145,9 @@ values(icursoID, iprofesorID, inombreI, iubicacion, ihoras_semanales, imateria);
 end//
 DELIMITER ;
 /* Update de curso, y proceso Cambiar Profesor,  cambia el profesor del curso*/
-drop procedure if exists CambiarProfesor;
+drop procedure if exists CambiarProfesorDeCurso;
 DELIMITER //
-create procedure CambiarProfesor(in icursoID varchar(8),in iprofesorID varchar(8))
+create procedure CambiarProfesorDeCurso(in icursoID varchar(8),in iprofesorID varchar(8))
 begin
 update Curso set profesorID= iprofesorID where cursoID= icursoID;
 end//
@@ -195,9 +195,9 @@ DELIMITER ;
 /*Al insertar actividades se pone por defecto la duracion como 0, si son lecciones o controles de lectura se 
 aniade duracion despues de la insercion. Este procedimiento no inserta duracion, la deja como null por defecto*/
 /*Anadir nueva tarea y add actividad son el mismo procedimiento*/
-drop procedure if exists addNuevaTarea;
+drop procedure if exists anadirNuevaTarea;
 DELIMITER //
-create procedure addNuevaTarea(in iactividadID varchar(8),in iprofesorID varchar(8),in icursoID varchar(8),
+create procedure anadirNuevaTarea(in iactividadID varchar(8),in iprofesorID varchar(8),in icursoID varchar(8),
 in ifecha_Entrega datetime,in idescripcion varchar(100))
 begin
 insert into Actividades (actividadID,profesorID,cursoID,fecha_Entrega,descripcion)
@@ -206,9 +206,9 @@ end//
 DELIMITER ;
 
 /* cambia la duracion de la actividad*/
-drop procedure if exists CambiarActividad;
+drop procedure if exists CambiarActividadDuracion;
 DELIMITER //
-create procedure CambiarActividad(in iactividadID varchar(8),in iduracion_Actividad time)
+create procedure CambiarActividadDuracion(in iactividadID varchar(8),in iduracion_Actividad time)
 begin
 update Actividades set duracion_Actividad= iduracion_Actividad where actividadID= iactividadID;
 end//
@@ -237,9 +237,9 @@ values(iestudianteID,icursoID,ihorario);
 end//
 DELIMITER ;
 /*Asigna el horario del curso a todos los estudiantes que pertenezcan a ese curso*/
-drop procedure if exists CambiarPertenecer;
+drop procedure if exists CambiarPertenecerHorario;
 DELIMITER //
-create procedure CambiarPertenecer(in icursoID varchar(8), ihorario datetime)
+create procedure CambiarPertenecerHorario(in icursoID varchar(8), ihorario datetime)
 begin
 update Pertenecer set horario = ihorario where cursoID=icursoID;
 end//
