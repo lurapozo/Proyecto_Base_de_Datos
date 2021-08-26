@@ -45,13 +45,6 @@ create table Estudiantes (
     foreign key (nombreI, ubicacion) references Institucion (nombreI, ubicacion),
     foreign key (adminID) references Adminn(adminID)
 );
-create table Ensenar(
-    profesorID char(8) not null,
-    estudianteID char(8) not null,
-    primary key (profesorID, estudianteID),
-    foreign key (estudianteID) references Estudiantes(estudianteID),
-    foreign key (profesorID) references Profesores(profesorID)
-);
 create table Actividades(
     actividadID char(8) not null,
     profesorID char(8) not null,

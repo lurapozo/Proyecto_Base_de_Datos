@@ -4,7 +4,8 @@ select nombreA, correo, horario_Turno from Adminn where weekday(horario_Turno) =
 
 /*Muestra todos los trabajos pendientes*/
 create view TrabajosPendientes as
-select actividadID, estudianteID from Trabajos where estado is null ;
+select Trabajos.actividadID, Trabajos.estudianteID,Actividades.descripcion, Actividades.fecha_Entrega 
+from Trabajos, Actividades where Trabajos.actividadID=Actividades.actividadID and estado is null ;
 
 /*Consultar datos de profesor*/
 create view vistaDatosProfesor as
@@ -38,4 +39,5 @@ create view vistaCantEstudiantesPorCurso as
 select count(Estudiantes.estudianteID),Curso.cursoID from Pertenecer,Estudiantes, Curso 
 where Estudiantes.estudianteID=Pertenecer.estudianteID and Pertenecer.cursoID=Curso.cursoID group by Curso.cursoID;
 
-
+/*Muestra los datos de los admins*/
+create view vistaAdmin as Select * From Adminn;
