@@ -32,6 +32,7 @@ end//
 DELIMITER ;
 call borrarAdmin('ADM00022');
 
+call verDatosAdmin();
 /*Estudiantes*/
 /*Se ingresa un nuevo estudiante*/
 drop procedure if exists anadirEstudiante;
@@ -358,18 +359,18 @@ drop procedure if exists verCantEstudiantesPorCurso;
 DELIMITER //
 create procedure verCantEstudiantesPorCurso(in icursoID varchar(8))
 begin
-select * from vistaCantEstudiantesPorCurso where cursoID=icursoID;
+select cantidad_Estudiantes from vistaCantEstudiantesPorCurso where cursoID=icursoID;
 end//
 DELIMITER ;
 
 call verCantEstudiantesPorCurso('CUR00001');
-/*Muestra los datos importantes de los admins*/
+/*Consultar datos del admin por ID*/
 drop procedure if exists verDatosAdmin;
 DELIMITER //
-create procedure verDatosAdmin()
+create procedure verDatosAdmin(in iadminID varchar(8))
 begin
-select nombreA,horario_Turno,correo from Adminn;
+select nombreA, diaDeTrabajo, 
+horaDeTrabajo, correo from vistaDatosAdmin where adminID=iadminID;
 end//
 DELIMITER ;
-
-call verDatosAdmin();
+call verDatosAdmin('ADM00001');
